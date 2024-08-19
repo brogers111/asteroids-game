@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling while modal is open */
+}
+
+.canvas-container {
+    position: relative; /* Ensure canvas and modal can be positioned relative to this container */
+}
+
+canvas {
+    position: absolute; /* Position canvas relative to container */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure canvas is behind modal */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position modal relative to container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(255, 38, 38, 0.8); /* Semi-transparent purple background */
+    z-index: 2; /* Ensure modal is above canvas */
+    color: white;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: absolute; /* Position content relative to modal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center content horizontally and vertically */
+    text-align: center;
+    background-color: #000000;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* The Play Again Button */
+.modalBtn {
+    background-color: rgba(255, 38, 38, 0.8);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.modalBtn:hover,
+.modalBtn:focus {
+    background-color: rgba(255, 38, 38, 1);
+}
